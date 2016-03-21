@@ -6,9 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * Created by THU on 2015/9/8.
- */
+
 public class MainWeek62 {
 
     public static void main(String args[]) {

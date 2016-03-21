@@ -3,9 +3,7 @@ package tsinghua.cs.zhangfei.leetcode;
 import java.util.Arrays;
 import java.util.HashSet;
 
-/**
- * Created by THU on 2015/10/19.
- */
+
 public class ContainsDuplicate {
     public static void main(String[] args){
 
