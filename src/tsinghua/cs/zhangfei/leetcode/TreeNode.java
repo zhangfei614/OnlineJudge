@@ -26,8 +26,8 @@ public class TreeNode {
             }
             for(int i=0;i<treeNodeArrayList.size()/2;i++){
                 if(treeNodeArrayList.get(i)!=null){
-                    treeNodeArrayList.get(i).left = treeNodeArrayList.get(i*2+1);
-                    treeNodeArrayList.get(i).right = treeNodeArrayList.get(i*2+2);
+                    treeNodeArrayList.get(i).left = (i*2+1 < treeNodeArrayList.size() ? treeNodeArrayList.get(i*2+1):null);
+                    treeNodeArrayList.get(i).right = (i*2+2 < treeNodeArrayList.size() ? treeNodeArrayList.get(i*2+2):null);
                 }
             }
             return treeNodeArrayList.get(0);
