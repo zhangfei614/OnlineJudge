@@ -8,10 +8,12 @@ package tsinghua.cs.zhangfei.leetcode;
 public class RecoverBinarySearchTree {
     private TreeNode prev = null;
     private TreeNode first = null;
+    private static TreeNode MAX_TREENODE = new TreeNode(Integer.MAX_VALUE);
     public void recoverTree(TreeNode root) {
         if(root == null ) return ;
         dfs(root);
-        dfs_print(root);
+        //无序数有可能是最后一位，可以利用强行在最后一个加入最大结点解决。
+        dfs(MAX_TREENODE);
     }
 
     private void dfs(TreeNode node){
@@ -19,18 +21,16 @@ public class RecoverBinarySearchTree {
         dfs(node.left);
         if(prev == null) prev = node;
         else{
+            //出现第一个无序数时，记录下来。
             if(prev.val > node.val){
                 if(first == null) first = prev;
-                else{
-                    int temp = first.val;
-                    first.val = node.val;
-                    node.val = temp;
-                }
             }
-            if(first != null && node.val > first.val){
-                int temp = first.val;
-                first.val = prev.val;
-                prev.val = temp;
+            //找到无序数所处位置，必然是前面一个与其进行交换。
+            if(first != null && node.val >= first.val){
+                int temp = prev.val;
+                prev.val = first.val;
+                first.val = temp;
+                first = null;
             }
             prev = node;
         }
@@ -43,10 +43,4 @@ public class RecoverBinarySearchTree {
         new RecoverBinarySearchTree().recoverTree(root);
     }
 
-    private void dfs_print(TreeNode node){
-        if(node == null) return;
-        dfs_print(node.left);
-        System.out.println(node.val);
-        dfs_print(node.right);
-    }
 }
