@@ -1,0 +1,30 @@
+Array
+37Hash Table
+24Linked List
+40Math
+29Two Pointers
+49String
+12Divide and Conquer
+24Binary Search
+41Dynamic Programming
+29Backtracking
+20Stack
+9Heap
+10Greedy
+14Sort
+15Bit Manipulation
+43Tree
+//Depth-first Search
+//Breadth-first Search
+6Union Find
+8Graph
+18Design
+4Topological Sort
+4Trie
+4Binary Indexed Tree
+4Segment Tree
+3Binary Search Tree
+2Recursion
+2Brainteaser
+1Memoization
+1Queue
