@@ -13,13 +13,13 @@ Array
 10Greedy
 14Sort
 15Bit Manipulation
-43Tree
+//43Tree
 //Depth-first Search
 //Breadth-first Search
 6Union Find
-8Graph
+//8Graph
 18Design
-4Topological Sort
+//4Topological Sort
 4Trie
 4Binary Indexed Tree
 4Segment Tree
