@@ -30,7 +30,7 @@ public class CopyListRandomPointer {
      * 此种方法调用栈过多，已经stackoverflow
      */
     private Map<RandomListNode,RandomListNode> hashMap = new HashMap<RandomListNode, RandomListNode>();
-    public RandomListNode copyRandomList(RandomListNode head) {
+    public RandomListNode copyRandomListRecursion(RandomListNode head) {
         if(head == null ) return null;
         if(hashMap.containsKey(head))
             return hashMap.get(head);
@@ -38,11 +38,47 @@ public class CopyListRandomPointer {
         RandomListNode newNode = new RandomListNode(head.label);
         hashMap.put(head,newNode);
 
-        if(head.next != null) newNode.next = copyRandomList(head.next);
-        if(head.random != null) newNode.random = copyRandomList(head.random);
+        if(head.next != null) newNode.next = copyRandomListRecursion(head.next);
+        if(head.random != null) newNode.random = copyRandomListRecursion(head.random);
         return newNode;
     }
 
+    public RandomListNode copyRandomList(RandomListNode head){
+        if(head == null) return null;
+        RandomListNode p,q,t,newHead;
+        //生成新的节点，并插入到原节点后。
+        p = head;
+        while(p.next != null){
+            RandomListNode node = new RandomListNode(p.label);
+            t = p.next;
+            p.next = node;
+            node.next = t;
+            p = t;
+        }
+        p.next = new RandomListNode(p.label);
+
+        //构建random指针
+        p = head;
+        while(p != null){
+            if(p.random != null)
+                p.next.random = p.random.next;
+            p = p.next.next;
+        }
+
+        //恢复原始链和生成新链。
+        newHead = head.next;
+        p = head;
+        q = newHead;
+        while(p != null && q != null){
+            p.next = q.next;
+            p = p.next;
+            if(p != null){
+                q.next = p.next;
+                q = q.next;
+            }
+        }
+        return newHead;
+    }
 
     public static void main(String[] args){
         int[] array = {-1,-1};
