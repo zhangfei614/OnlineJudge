@@ -3,35 +3,27 @@ package tsinghua.cs.zhangfei.leetcode;
 /**
  * Created by Fei Zhang on 2016/6/27.
  * Email:zhangfei614@126.com
+ * 从一开始思路就是错的，还浪费了那么多时间。
+ * 原先思路：认为只跟前面的两天有关，而忘记了递推关系。
+ * 正确思路：确定递推关系验算，不要一开始就想实现。
  */
 
 public class BestTimeBuySellStockCooldown {
     public int maxProfit(int[] prices) {
         if(prices == null || prices.length < 2) return 0;
-        int buy = 0, sel = prices.length ,sum = 0;
-        int i = 1;
-        while (true){
-            while(i < prices.length && prices[i] <= prices[i-1]) buy = i++;
-            while(i < prices.length && prices[i] > prices[i-1]) sel = i++;
-            if(sel < prices.length - 2){
-                if(prices[sel] - prices[sel-1] > prices[sel+2] - prices[sel+1] && prices[sel + 2] < prices[buy]){
-                    sum += (prices[sel] - prices[buy]);
-                    buy = sel + 2;
-                }else if(prices[sel + 1] < prices[buy]){
-                    sum += (prices[sel-1] - prices[buy]);
-                    buy = sel + 1;
-                }
-            }else if (sel < prices.length){
-                sum +=(prices[sel] - prices[buy]);
-                break;
-            }
-            if(i == prices.length) break;
+        int len = prices.length;
+        int[] sell = new int[len];
+        int[] cooldown = new int[len];
+        sell[1] = prices[1] - prices[0];
+        for(int i = 2; i < prices.length; i++){
+            cooldown[i] = Math.max(sell[i-1],cooldown[i-1]);
+            sell[i] = prices[i]-prices[i-1] + Math.max(sell[i-1],cooldown[i-2]);
         }
-        return sum;
+        return Math.max(sell[len-1],cooldown[len-1]);
     }
 
     public static void main(String[] args){
-        int[] price = {6,1,3,2,4,7};
+        int[] price = {8,6,4,3,3,2,3,5,8,3,8,2,6};
         System.out.println(new BestTimeBuySellStockCooldown().maxProfit(price));
     }
 }
