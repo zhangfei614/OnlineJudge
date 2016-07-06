@@ -31,7 +31,7 @@ public class BestTimeBuySellStockIII {
 
     public int maxProfitSimple(int[] prices){
         int sel1 = 0, sel2 = 0, buy1 = Integer.MIN_VALUE, buy2 = Integer.MIN_VALUE;
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < prices.length; i++){
             buy1 = Math.max(buy1,-prices[i]);
             sel1 = Math.max(sel1,prices[i] + buy1);
             buy2 = Math.max(buy2,sel1 - prices[i]);
