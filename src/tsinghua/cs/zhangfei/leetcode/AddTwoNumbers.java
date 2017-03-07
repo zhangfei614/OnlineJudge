@@ -1,7 +1,13 @@
 package tsinghua.cs.zhangfei.leetcode;
 
 /**
- * Created by THU on 2015/10/21.
+ * Created by THU on 2015/10/21。
+ You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+ You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+ Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+ Output: 7 -> 0 -> 8
  */
 
 
@@ -12,6 +18,15 @@ public class AddTwoNumbers {
         ListNode next;
         ListNode(int x) { val = x; }
     }
+
+    /**
+     * 1.将所有的值都加到l2上
+     * 2.将l2上所有超过10的值进行进制转换
+     * 3.返回l2
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode p,q;
         p = l1;
@@ -42,6 +57,13 @@ public class AddTwoNumbers {
         return  l2;
     }
 
+    /**
+     * 1.构件一个新的链表用于存储结果数据
+     * 2.如果大于10，则新节点值为(sum%10)
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         ListNode c1 = l1;
         ListNode c2 = l2;
