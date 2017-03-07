@@ -3,10 +3,21 @@ package tsinghua.cs.zhangfei.leetcode;
 /**
  * Created by Fei Zhang on 2016/5/6.
  * Email:zhangfei614@126.com
- * 李荣sb来进行
+ Given two binary strings, return their sum (also a binary string).
+
+ For example,
+ a = "11"
+ b = "1"
+ Return "100".
  */
 
 public class AddBinary {
+    /**
+     * 利用StringBuilder每一位进行求解
+     * @param a
+     * @param b
+     * @return
+     */
     public String addBinary(String a, String b) {
         int add = 0;
         int i = a.length()-1;
