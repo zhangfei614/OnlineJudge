@@ -1,4 +1,4 @@
-package apac;
+package tsinghua.cs.zhangfei.apac;
 
 import tsinghua.cs.zhangfei.OJTools;
 
