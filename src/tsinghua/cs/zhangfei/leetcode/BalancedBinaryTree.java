@@ -2,6 +2,7 @@ package tsinghua.cs.zhangfei.leetcode;
 
 /**
  * Created by zhangfei on 2016/4/8.
+ *
  */
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
