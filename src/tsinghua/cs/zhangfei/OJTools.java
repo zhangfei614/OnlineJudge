@@ -11,7 +11,7 @@ public class OJTools {
     public static Scanner testFileScanner(){
         Scanner input = null;
         try{
-            input = new Scanner(new File("e:\\code\\OJ\\data.in"));
+            input = new Scanner(new File("D:\\code\\OnlineJudge\\data.in"));
         }catch (FileNotFoundException e){
             System.out.println("Data.in file not found!");
         }
