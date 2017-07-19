@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * Created by zhangfei on 2016/5/24.
+ *
  */
 class RandomListNode {
     int label;
