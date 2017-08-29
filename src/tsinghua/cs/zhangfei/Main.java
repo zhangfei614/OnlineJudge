@@ -1,79 +1,42 @@
 package tsinghua.cs.zhangfei;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.Comparator;
 
 public class Main {
 
-    private static int[] count;
-    private static int MAX = Integer.MIN_VALUE;
 
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-//        Scanner input = OJTools.testFileScanner();
-        int n,m,k,l,r;
-        int[] array;
-        int temp;
-        while(input.hasNext()){
-            n = input.nextInt();
-            array = new int[n+1];
-            for(int i = 1; i <= n; i++) {
-                temp=input.nextInt();
-                if(temp > MAX) MAX = temp;
-                array[i] = temp;
-            }
-            count = new int[MAX+1];
-            m = input.nextInt();
-            for(int i = 0; i < m; i++){
-                k = input.nextInt();
-                l = input.nextInt();
-                r = input.nextInt();
-                List<Integer> result = query(array,k,l,r);
-                if(result == null || result.size() == 0) System.out.println("EMPTY");
-                else{
-                    boolean flag = true;
-                    for(Integer integer : result){
-                        if(flag){
-                            System.out.print(integer.intValue());
-                            flag = false;
-                        }else{
-                            System.out.print(" "+integer.intValue());
-                        }
-                    }
-                    System.out.println();
-                }
-            }
-        }
+    public static void main(String[] args) {
+        int[] test = new int[]{345,30,34,5,9};
+        System.out.println(new Main().maxValue(test));
     }
 
-    private static List<Integer> query(int[] array,int k,int l,int r){
-        if(r < l) return null;
-        if(k > r-l+1) return null;
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        int temp;
 
-        Arrays.fill(count, 0);
-        for(int i = l; i <= r; i++) {
-            temp = array[i];
-            count[temp]++;
-            if(temp > max) max = temp;
-            if(temp < min) min = temp;
-        }
-
-        List<Integer> result = new ArrayList<Integer>();
-        temp = 0;
-        for(int i = min; i <= max; i++){
-            if(count[i]!=0){
-                temp+=count[i];
-                while(temp >= k){
-                    result.add(i);
-                    temp-=k;
+    public String maxValue(int[] arr) {
+        String[] strs = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) strs[i] = String.valueOf(arr[i]);
+        Arrays.sort(strs, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if (o1.equals(o2)) return 0;
+                char[] chars1 = o1.toCharArray();
+                char[] chars2 = o2.toCharArray();
+                int i = 0, j = 0;
+                while (i < chars1.length && j < chars2.length) {
+                    if (chars1[i] > chars2[j]) return -1;
+                    else if (chars1[i] < chars2[j]) return 1;
+                    else {
+                        i++;
+                        j++;
+                    }
+                    if (i == chars1.length && j < chars2.length) i = 0;
+                    if (j == chars2.length && i < chars1.length) j = 0;
                 }
+                return 0;
             }
-        }
-        return result;
+        });
+        StringBuilder sb = new StringBuilder();
+        for(String s : strs) sb.append(s);
+        return sb.toString();
     }
 }
