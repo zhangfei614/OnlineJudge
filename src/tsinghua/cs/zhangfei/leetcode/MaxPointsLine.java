@@ -94,10 +94,11 @@ public class MaxPointsLine {
 
     public static void main(String[] args){
         //int[][] test = {{84,250},{0,0},{1,0},{0,-70},{0,-70},{1,-1},{21,10},{42,90},{-42,-230},{1,1}};
-        int[][] test = {{0,0},{0,0},{0,0}};
-        Point[] points = new Point[test.length];
-        for(int i = 0; i < test.length; i++)
-            points[i] = new Point(test[i][0],test[i][1]);
-        System.out.println(new MaxPointsLine().maxPointsSimple(points));
+//        int[][] test = {{0,0},{0,0},{0,0}};
+//        Point[] points = new Point[test.length];
+//        for(int i = 0; i < test.length; i++)
+//            points[i] = new Point(test[i][0],test[i][1]);
+//        System.out.println(new MaxPointsLine().maxPointsSimple(points));
+        System.out.println(65536*65536);
     }
 }

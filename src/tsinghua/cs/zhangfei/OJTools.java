@@ -2,7 +2,7 @@ package tsinghua.cs.zhangfei;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by THU on 2015/9/8.
@@ -26,4 +26,5 @@ public class OJTools {
 
     public static final int[][] dist = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     public static final int[][] dist8 = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {1, 1}, {1, -1}, {-1, -1}, {1, 1}};
+
 }
