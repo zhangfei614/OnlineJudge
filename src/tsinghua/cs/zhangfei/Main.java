@@ -29,6 +29,7 @@ public class Main {
                         i++;
                         j++;
                     }
+
                     if (i == chars1.length && j < chars2.length) i = 0;
                     if (j == chars2.length && i < chars1.length) j = 0;
                 }
