@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.algorithms.datastructure;
+package zhangfei.algorithms.datastructure;
 
 /**
  * Created by Fei Zhang on 2017/4/7.

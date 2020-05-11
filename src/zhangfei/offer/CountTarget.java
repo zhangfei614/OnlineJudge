@@ -1,8 +1,8 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
 /**
  * Created by zhangfei on 2017/7/31.
- * 统计一个数字在排序数组中出现的次数
+ * 统锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫筹拷锟街的达拷锟斤拷
  */
 public class CountTarget {
 

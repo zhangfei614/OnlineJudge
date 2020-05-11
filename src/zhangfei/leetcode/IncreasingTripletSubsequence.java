@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
 /**
  * Created by THU on 2016/3/14.

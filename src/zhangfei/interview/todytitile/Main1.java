@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.interview.todytitile;
+package zhangfei.interview.todytitile;
 
 import java.util.Arrays;
 import java.util.Comparator;

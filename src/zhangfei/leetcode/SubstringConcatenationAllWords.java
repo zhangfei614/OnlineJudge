@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
 import java.net.Inet4Address;
 import java.util.*;

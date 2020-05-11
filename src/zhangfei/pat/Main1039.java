@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.pat;
+package zhangfei.pat;
 
-import tsinghua.cs.zhangfei.OJTools;
+import zhangfei.OJTools;
 
 import java.util.Scanner;
 

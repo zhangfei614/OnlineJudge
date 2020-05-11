@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
 import java.util.Arrays;
 import java.util.HashSet;

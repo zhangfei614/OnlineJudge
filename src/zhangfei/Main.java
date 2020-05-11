@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei;
+package zhangfei;
 
 import java.util.Arrays;
 import java.util.Comparator;

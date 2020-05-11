@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.hiCoder;
+package zhangfei.hiCoder;
 
 import java.util.ArrayList;
 import java.util.Scanner;

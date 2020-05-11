@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.interview.netease;
+package zhangfei.interview.netease;
 
 import java.util.Scanner;
 import java.util.Stack;

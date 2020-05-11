@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.interview;
+package zhangfei.interview;
 
 import java.util.List;
 import java.util.Scanner;

@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
-import tsinghua.cs.zhangfei.leetcode.ListNode;
+import zhangfei.leetcode.ListNode;
 
 /**
  * Created by zhangfei on 2017/8/4.

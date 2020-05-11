@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
 import java.util.LinkedList;
 import java.util.List;

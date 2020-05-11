@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
-import tsinghua.cs.zhangfei.leetcode.TreeNode;
+import zhangfei.leetcode.TreeNode;
 
 /**
  * Created by zhangfei on 2017/7/19.

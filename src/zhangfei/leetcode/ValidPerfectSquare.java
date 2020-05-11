@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
 /**
  * Created by zhangfei614 on 2017/6/28.

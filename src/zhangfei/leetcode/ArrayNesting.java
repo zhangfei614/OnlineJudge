@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
-import tsinghua.cs.zhangfei.OJTools;
+import zhangfei.OJTools;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.tsinsen;
+package zhangfei.tsinsen;
 
 import java.util.ArrayList;
 import java.util.List;

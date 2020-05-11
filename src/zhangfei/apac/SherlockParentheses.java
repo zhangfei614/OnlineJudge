@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.apac;
+package zhangfei.apac;
 
-import tsinghua.cs.zhangfei.OJTools;
+import zhangfei.OJTools;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;

@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.leetcode;
+package zhangfei.leetcode;
 
-import tsinghua.cs.zhangfei.Main;
+import zhangfei.Main;
 
 /**
  * Created by zhangfei on 2016/5/19.

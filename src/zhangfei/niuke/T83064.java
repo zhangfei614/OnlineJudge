@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.niuke;
+package zhangfei.niuke;
 
 import java.util.Scanner;
 

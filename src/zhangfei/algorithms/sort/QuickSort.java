@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.algorithms.sort;
+package zhangfei.algorithms.sort;
 
 import java.util.Random;
 

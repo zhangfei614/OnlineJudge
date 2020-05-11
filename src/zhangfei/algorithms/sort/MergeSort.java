@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.algorithms.sort;
+package zhangfei.algorithms.sort;
 
 /**
  * Created by Fei Zhang on 2017/3/9.

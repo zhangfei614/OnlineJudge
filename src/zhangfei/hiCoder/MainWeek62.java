@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.hiCoder;
+package zhangfei.hiCoder;
 
-import tsinghua.cs.zhangfei.OJTools;
+import zhangfei.OJTools;
 
 import java.util.HashMap;
 import java.util.Map;

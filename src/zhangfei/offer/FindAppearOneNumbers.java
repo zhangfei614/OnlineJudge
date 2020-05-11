@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
 import java.util.Arrays;
 

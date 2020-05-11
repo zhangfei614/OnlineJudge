@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei;
+package zhangfei;
 
 import java.io.File;
 import java.io.FileNotFoundException;

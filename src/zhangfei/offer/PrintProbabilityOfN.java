@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
 /**
  * Created by Fei Zhang on 2017/6/12.

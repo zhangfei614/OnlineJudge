@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.tsinsen;
+package zhangfei.tsinsen;
 
-import tsinghua.cs.zhangfei.OJTools;
+import zhangfei.OJTools;
 
 import java.util.ArrayList;
 import java.util.Arrays;

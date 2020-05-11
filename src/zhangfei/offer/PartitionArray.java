@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
-import tsinghua.cs.zhangfei.OJTools;
+import zhangfei.OJTools;
 
 import java.util.Arrays;
 

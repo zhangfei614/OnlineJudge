@@ -1,6 +1,6 @@
-package tsinghua.cs.zhangfei.offer;
+package zhangfei.offer;
 
-import tsinghua.cs.zhangfei.leetcode.TreeNode;
+import zhangfei.leetcode.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

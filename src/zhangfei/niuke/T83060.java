@@ -1,4 +1,4 @@
-package tsinghua.cs.zhangfei.niuke;
+package zhangfei.niuke;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -6,15 +6,15 @@ import java.util.Scanner;
 
 /**
  * Created by zhangfei on 2017/8/11.
- * Ò»ÖÖË«ºËCPUµÄÁ½¸öºËÄÜ¹»Í¬Ê±µÄ´¦ÀíÈÎÎñ£¬ÏÖÔÚÓÐn¸öÒÑÖªÊý¾ÝÁ¿µÄÈÎÎñÐèÒª½»¸øCPU´¦Àí£¬¼ÙÉèÒÑÖªCPUµÄÃ¿¸öºË1Ãë¿ÉÒÔ´¦Àí1kb£¬Ã¿¸öºËÍ¬Ê±Ö»ÄÜ´¦ÀíÒ»ÏîÈÎÎñ¡£n¸öÈÎÎñ¿ÉÒÔ°´ÕÕÈÎÒâË³Ðò·ÅÈëCPU½øÐÐ´¦Àí£¬ÏÖÔÚÐèÒªÉè¼ÆÒ»¸ö·½°¸ÈÃCPU´¦ÀíÍêÕâÅúÈÎÎñËùÐèµÄÊ±¼ä×îÉÙ£¬ÇóÕâ¸ö×îÐ¡µÄÊ±¼ä¡£
- * ÊäÈëÃèÊö:
- * ÊäÈë°üÀ¨Á½ÐÐ£º
- * µÚÒ»ÐÐÎªÕûÊýn(1 ¡Ü n ¡Ü 50)
- * µÚ¶þÐÐÎªn¸öÕûÊýlength[i](1024 ¡Ü length[i] ¡Ü 4194304)£¬±íÊ¾Ã¿¸öÈÎÎñµÄ³¤¶ÈÎªlength[i]kb£¬Ã¿¸öÊý¾ùÎª1024µÄ±¶Êý¡£
+ * Ò»ï¿½ï¿½Ë«ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½Í¬Ê±ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖªCPUï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½1kbï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Í¬Ê±Ö»ï¿½Ü´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ù£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Ê±ï¿½ä¡£
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½
+ * ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½n(1 ï¿½ï¿½ n ï¿½ï¿½ 50)
+ * ï¿½Ú¶ï¿½ï¿½ï¿½Îªnï¿½ï¿½ï¿½ï¿½ï¿½ï¿½length[i](1024 ï¿½ï¿½ length[i] ï¿½ï¿½ 4194304)ï¿½ï¿½ï¿½ï¿½Ê¾Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½Îªlength[i]kbï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1024ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½
  * <p>
  * <p>
- * Êä³öÃèÊö:
- * Êä³öÒ»¸öÕûÊý£¬±íÊ¾×îÉÙÐèÒª´¦ÀíµÄÊ±¼ä
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+ * ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
  */
 public class T83060 {
 
